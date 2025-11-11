@@ -45,8 +45,11 @@ const Index = () => {
         </nav>
       </header>
 
-      <section className="pt-32 pb-20 px-4 bg-gradient-to-br from-background to-primary/5">
-        <div className="container mx-auto max-w-6xl">
+      <section className="pt-32 pb-20 px-4 bg-gradient-to-br from-background to-primary/5 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <img src="https://cdn.poehali.dev/projects/9a11e698-4541-4145-8a7d-14bed6260bed/files/acc389b5-8bb6-427e-9f4c-6d9f4be9c9c6.jpg" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <Badge className="mb-4">Разработка с 2020 года</Badge>
@@ -66,23 +69,21 @@ const Index = () => {
               </div>
             </div>
             <div className="animate-fade-in">
-              <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-8 text-white shadow-2xl">
-                <div className="grid grid-cols-2 gap-6">
-                  <div>
-                    <div className="text-4xl font-bold mb-2">150+</div>
-                    <div className="text-primary-foreground/80">Проектов</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-bold mb-2">98%</div>
-                    <div className="text-primary-foreground/80">Довольных клиентов</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-bold mb-2">5 лет</div>
-                    <div className="text-primary-foreground/80">На рынке</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-bold mb-2">24/7</div>
-                    <div className="text-primary-foreground/80">Поддержка</div>
+              <div className="relative">
+                <img 
+                  src="https://cdn.poehali.dev/projects/9a11e698-4541-4145-8a7d-14bed6260bed/files/e813e2c9-2ab7-4751-aa37-e7c62be4a31f.jpg" 
+                  alt="Рабочее пространство веб-разработчика" 
+                  className="rounded-2xl shadow-2xl w-full h-auto hover-scale"
+                />
+                <div className="absolute -bottom-8 -left-8 bg-white rounded-xl p-6 shadow-xl">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                      <Icon name="Award" className="text-white" size={24} />
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-primary">5 лет</div>
+                      <div className="text-sm text-muted-foreground">на рынке</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -91,7 +92,8 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="преимущества" className="py-20 px-4 bg-white">
+      <section id="преимущества" className="py-20 px-4 bg-white relative">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <Badge className="mb-4">Почему мы</Badge>
@@ -215,16 +217,17 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: "Интернет-магазин электроники", category: "E-commerce", tech: "React, Node.js" },
-              { title: "Корпоративный портал банка", category: "Финансы", tech: "Next.js, PostgreSQL" },
-              { title: "Лендинг строительной компании", category: "Строительство", tech: "React, Tailwind" },
-              { title: "CRM-система для логистики", category: "Логистика", tech: "React, Express" },
-              { title: "Маркетплейс услуг", category: "Сервисы", tech: "React, MongoDB" },
-              { title: "Образовательная платформа", category: "Образование", tech: "React, WebRTC" },
+              { title: "Интернет-магазин электроники", category: "E-commerce", tech: "React, Node.js", image: "https://cdn.poehali.dev/projects/9a11e698-4541-4145-8a7d-14bed6260bed/files/e813e2c9-2ab7-4751-aa37-e7c62be4a31f.jpg" },
+              { title: "Корпоративный портал банка", category: "Финансы", tech: "Next.js, PostgreSQL", image: "https://cdn.poehali.dev/projects/9a11e698-4541-4145-8a7d-14bed6260bed/files/6a855f92-c44c-477a-9341-0a8e1663bdb8.jpg" },
+              { title: "Лендинг строительной компании", category: "Строительство", tech: "React, Tailwind", image: "https://cdn.poehali.dev/projects/9a11e698-4541-4145-8a7d-14bed6260bed/files/e813e2c9-2ab7-4751-aa37-e7c62be4a31f.jpg" },
+              { title: "CRM-система для логистики", category: "Логистика", tech: "React, Express", image: "https://cdn.poehali.dev/projects/9a11e698-4541-4145-8a7d-14bed6260bed/files/6a855f92-c44c-477a-9341-0a8e1663bdb8.jpg" },
+              { title: "Маркетплейс услуг", category: "Сервисы", tech: "React, MongoDB", image: "https://cdn.poehali.dev/projects/9a11e698-4541-4145-8a7d-14bed6260bed/files/e813e2c9-2ab7-4751-aa37-e7c62be4a31f.jpg" },
+              { title: "Образовательная платформа", category: "Образование", tech: "React, WebRTC", image: "https://cdn.poehali.dev/projects/9a11e698-4541-4145-8a7d-14bed6260bed/files/6a855f92-c44c-477a-9341-0a8e1663bdb8.jpg" },
             ].map((project, index) => (
               <Card key={index} className="hover-scale hover:shadow-xl transition-all overflow-hidden group">
-                <div className="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                  <Icon name="Globe" className="text-white group-hover:scale-110 transition-transform" size={64} />
+                <div className="h-48 overflow-hidden relative">
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 </div>
                 <CardHeader>
                   <Badge className="w-fit mb-2">{project.category}</Badge>
@@ -239,8 +242,9 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-white">
-        <div className="container mx-auto max-w-6xl">
+      <section className="py-20 px-4 bg-white relative overflow-hidden">
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+        <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16">
             <Badge className="mb-4">Доверие</Badge>
             <h2 className="text-4xl font-bold mb-4">Почему выбирают нас</h2>
@@ -306,7 +310,8 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="отзывы" className="py-20 px-4 bg-white">
+      <section id="отзывы" className="py-20 px-4 bg-white relative overflow-hidden">
+        <div className="absolute top-1/2 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <Badge className="mb-4">Отзывы</Badge>
@@ -320,29 +325,39 @@ const Index = () => {
                 position: "Директор ООО «СтройМастер»",
                 text: "Отличная команда! Сделали лендинг за 10 дней, количество заявок выросло в 3 раза. Особенно понравилась оперативность и внимание к деталям.",
                 rating: 5,
+                avatar: "AI",
               },
               {
                 name: "Мария Петрова",
                 position: "Владелец интернет-магазина",
                 text: "Разработали магазин на 5000+ товаров. Всё работает быстро, удобная админка. Спасибо за качественную работу и поддержку после запуска!",
                 rating: 5,
+                avatar: "МП",
               },
               {
                 name: "Дмитрий Соколов",
                 position: "Маркетолог финтех-стартапа",
                 text: "Ребята реализовали сложный проект с нестандартными требованиями. Всё в срок, профессионально, с пониманием наших бизнес-задач.",
                 rating: 5,
+                avatar: "ДС",
               },
             ].map((review, index) => (
-              <Card key={index} className="hover-scale hover:shadow-lg transition-all">
+              <Card key={index} className="hover-scale hover:shadow-lg transition-all relative z-10">
                 <CardHeader>
-                  <div className="flex gap-1 mb-3">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-lg">
+                      {review.avatar}
+                    </div>
+                    <div>
+                      <CardTitle className="text-lg">{review.name}</CardTitle>
+                      <CardDescription>{review.position}</CardDescription>
+                    </div>
+                  </div>
+                  <div className="flex gap-1">
                     {[...Array(review.rating)].map((_, i) => (
                       <Icon key={i} name="Star" className="text-yellow-400 fill-yellow-400" size={18} />
                     ))}
                   </div>
-                  <CardTitle className="text-lg">{review.name}</CardTitle>
-                  <CardDescription>{review.position}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground italic">«{review.text}»</p>
